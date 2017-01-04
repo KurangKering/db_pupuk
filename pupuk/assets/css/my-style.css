@@ -1,0 +1,10 @@
+.toolbar {
+	float: left;
+}
+
+.hidden-div {
+	display: none;
+}
+.custom-card > .content {
+	min-height: 0 ;
+}

@@ -1,0 +1,30 @@
+Versi ini belum fix.
+
+tinggal modul laporan sama cetak kartu anggota.
+dashboard mau dipercantik.
+
+Cara Instalasi :
+Buka phpmyadmin > klik import database > pilih db_pupuk.sql yang ada di direktori ini. >
+copy folder db_pupuk ke htdocs yang ada di xampp.
+
+
+Username : admin
+password : admin
+
+
+Kerjakan apa yang bisa dikerjakan dulu.
+
+Data master anggota, pupuk, sama distributor masih kosong. silahkan isi banyak banyak.
+
+
+Buat use case nya sesuaikan aja dengan yang ada di sistem. buka sistem nya dulu. jalankan. 
+
+
+Buat black box sama white box nya jangan sembarangan. 
+buat prototype nya menggunakan aplikasi balsamiq mockup 3
+
+aku mau makan.
+
+
+Oh iya, Install xampp aku v3.2.2
+Usahakan xampp kalian sama atau di atas xampp aku biar jalan lancar.
