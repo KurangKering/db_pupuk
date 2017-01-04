@@ -11,6 +11,8 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" language="javascript" src="assets/plugins/moment/moment.js"></script>
+
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/AdminLTE.min.css" rel="stylesheet" />
     <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
@@ -22,7 +24,6 @@
     <link rel="stylesheet" href="assets/plugins/jqueryui/jquery-ui.min.css">
     
     <link rel="stylesheet" href="assets/css/my-style.css">
-
 
     <?php if (isset($css_tambahan)) echo $css_tambahan; ?>
 </head>

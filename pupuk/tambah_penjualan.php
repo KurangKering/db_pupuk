@@ -31,7 +31,7 @@ include 'layout/header.php';
 							</div>
 							<div class="form-group">
 								<label>Nama Anggota</label>
-								<input type="text" class="form-control" readonly="" id="nama_anggota" data-toggle="modal" data-target="#myModal"  required name="nama_anggota">
+								<input type="text" class="form-control readonly" id="nama_anggota" data-toggle="modal" data-target="#myModal"  required name="nama_anggota">
 							</div>
 						</div>
 						<div class="col-md-4 col-md-offset-3">
@@ -133,7 +133,7 @@ include 'layout/header.php';
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
 		<script type="text/javascript">
 			var dTable;
 			$(document).ready(function() {
@@ -153,7 +153,9 @@ include 'layout/header.php';
 			} );
 
 // function tambah dan edit
-
+$(".readonly").on('keydown paste', function(e){
+	e.preventDefault();
+});
 
 function update_total () {
 	$.ajax({
@@ -259,12 +261,6 @@ $(document).on('click', '#btn_tambah', function (e) {
 
 	}
 
-});
-$(document).on('submit', '#submit_penjualan', function(e) {
-	e.preventDefault();
-	var totalRecords = $("#table_tmp").DataTable().page.info().recordsTotal;
-	alert(totalRecords);
-	
 });
 
         //Tampilkan Modal 

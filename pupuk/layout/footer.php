@@ -19,7 +19,7 @@
 <script src="assets/plugins/jqueryui/jquery-ui.min.js"></script>
 <script src="assets/plugins/dataTables/media/js/jquery.dataTables.min.js"></script>
 <script src="assets/plugins/dataTables/media/js/dataTables.bootstrap.min.js"></script>
-<script src="assets/plugins/chartjs/chart.js"></script>
+<script src="assets/plugins/Chart.js/chart.min.js"></script>
 <script src="assets/plugins/validator/validator.min.js"></script>
 
 

@@ -61,7 +61,14 @@ switch ($_POST['type']) {
 
 	case "get_data_penjualan":
 
-	$SQL = mysqli_query($con, "SELECT * from anggota");
+	$SQL = mysqli_query($con, "SELECT tanggal, COUNT(*) as total FROM penjualan WHERE MONTH(tanggal) = MONTH(NOW()) GROUP BY tanggal");
+	$return = mysqli_fetch_all($SQL,MYSQLI_ASSOC);
+	echo json_encode($return);			
+	break;
+
+	case "get_data_penyediaan":
+
+	$SQL = mysqli_query($con, "SELECT tanggal, COUNT(*) as total FROM penyediaan WHERE MONTH(tanggal) = MONTH(NOW()) GROUP BY tanggal");
 	$return = mysqli_fetch_all($SQL,MYSQLI_ASSOC);
 	echo json_encode($return);			
 	break;

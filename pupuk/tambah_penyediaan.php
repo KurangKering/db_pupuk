@@ -31,7 +31,7 @@ include 'layout/header.php';
 							</div>
 							<div class="form-group">
 								<label>Nama distributor</label>
-								<input type="text" class="form-control" required readonly="" id="nama_distributor" data-toggle="modal" data-target="#myModal"  name="nama_distributor">
+								<input type="text" class="form-control readonly" required id="nama_distributor" data-toggle="modal" data-target="#myModal"  name="nama_distributor">
 							</div>
 						</div>
 						<div class="col-md-4 col-md-offset-3">
@@ -152,6 +152,9 @@ ob_start();
 
 // function tambah dan edit
 
+$(".readonly").on('keydown paste', function(e){
+	e.preventDefault();
+});
 
 function update_total () {
 	$.ajax({
