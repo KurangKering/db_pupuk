@@ -30,11 +30,11 @@ $lists = array(
 		"link" => "pupuk.php",
 		"icon" => "pe-7s-gleam",
 		"title" => "Pupuk"
-		),
-	array(
-		"link" => "p_laporan.php",
-		"icon" => "pe-7s-note2",
-		"title" => "Laporan"
 		)
-	);
+	// array(
+	// 	"link" => "laporan.php",
+	// 	"icon" => "pe-7s-note2",
+	// 	"title" => "Laporan"
+	// 	)
+	 );
 ?>

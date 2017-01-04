@@ -9,6 +9,12 @@ $db = new CRUD();
 /******************************************************************/
 $header_title = 'Dummy';
 include 'layout/header.php';
+
+$con = mysqli_connect("localhost","root","","db_pupuk");
+if (mysqli_connect_errno())
+{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 // $sql = "SELECT SQL_CALC_FOUND_ROWS p.*,a.nama_anggota, 
 // (SELECT SUM(dp.kuantitas * p.harga_per_kg) FROM detail_penjualan dp JOIN  pupuk p ON  dp.id_pupuk = p.id_pupuk WHERE dp.id_penjualan = p.id_penjualan ) AS total FROM penjualan AS p 
 // inner join anggota AS a  on
@@ -28,13 +34,29 @@ include 'layout/header.php';
 
 // $sql = "SELECT SUM(dp.kuantitas * p.harga_per_kg) AS TOTAL FROM detail_penjualan dp JOIN  pupuk p ON  dp.id_pupuk = p.id_pupuk 	  GROUP BY dp.id_penjualan";
 // $sql = "SELECT p.id_pupuk, nama_pupuk FROM detail_penjualan p INNER JOIN pupuk ON p.id_pupuk = pupuk.id_pupuk WHERE p.id_penjualan = 3";
+// $cicak = $db->getRows('anggota', array('where' => array("id_anggota" => '4') ));
 
- $anggota = $db->getRows("anggota");
-echo $anggota ? count($anggota) : "false";
+// echo $cicak[0]['id_anggota'];
+// print_r($cicak);
 
 // $result = $pdo->prepare($sql);
 // $result->execute();
 // $q = $result->fetchAll();
 //echo json_encode($q);
+//
+//
+//
+
+$SQL = mysqli_query($con, 
+	"INSERT INTO anggota SET 
+	nama_anggota= 'cicak', 
+	jk='laki-laki', 
+	tgl_lahir='0000',
+	alamat='sdfjklsakflas'
+	");
+$last_id = mysqli_insert_id($con);
+header("Location: ../kartu_anggota.php?id_anggota= '".$last_id."'' ");
+
+print_r($last_id);
 include 'layout/footer.php';
 ?>

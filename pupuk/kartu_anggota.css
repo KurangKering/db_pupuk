@@ -1,16 +1,8 @@
 .card-kartu {
 	width: 9cm;
 	height: 6cm;
-	background-color: orange;
 }
 
-.logo-perusahaan {
-	width: 100%;
-	height: 50px;
-}
-.card-header {
-	border-bottom: 3px solid #ababab;
-}
 
 .div-logo {
 	border-right: 3px solid #ababab;
@@ -24,3 +16,16 @@
 .table-borderless tfoot tr td {
 	border: none;
 }
+.th-judul {
+	min-width: 110px;
+}
+
+.table_anggota {
+	width: 100%;
+	table-layout: fixed;
+	border-spacing: 20px;
+}
+td {
+	word-wrap: break-word;
+}
+

@@ -171,7 +171,7 @@
  						datasets : [
  						{
  							label: 'Total Penyediaan',
- 							backgroundColor: 'rgba(100, 200, 200, 0.75)',
+ 							backgroundColor: 'rgba(229, 20, 0, 0.75)',
  							borderColor: 'rgba(200, 200, 200, 0.75)',
  							hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
  							hoverBorderColor: 'rgba(200, 200, 200, 1)',

@@ -154,7 +154,7 @@ include '../sesi.php';
 		while ( $aRow = $rResult->fetch_assoc() ) {
 			$row = array();
 			$btn = '<td><center>
-			<a href="cetak.php?id_anggota='.$aRow['id_anggota'].'"  data-toggle="tooltip" title="Cetak" class="btn btn-sm btn-primary btn-fill"> <i class="fa fa-print" aria-hidden="true"></i></a>
+			<a target="_blank" href="kartu_anggota.php?id_anggota='.$aRow['id_anggota'].'"  data-toggle="tooltip" title="Cetak" class="btn btn-sm btn-primary btn-fill"> <i class="fa fa-print" aria-hidden="true"></i></a>
 			<a onClick="showFormAnggota(\''.$aRow['id_anggota'].'\')" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-warning btn-fill"> <i class="fa fa-edit" aria-hidden="true"></i></a>
 			<a onClick="deleteAnggota(\''.$aRow['id_anggota'].'\')"   data-toggle="tooltip" title="Hapus" class="btn btn-sm btn-danger btn-fill"> <i class="fa fa-trash" aria-hidden="true"></i></a>
 		</center></td>';

@@ -95,7 +95,7 @@ include 'layout/header.php';
 <!--=================================================================================-->
 
 <?php 
-$js_tambahan = <<<EOF
+ob_start()?>
 <script type="text/javascript" language="javascript" >
  var dTable;
  $(document).ready(function() {
@@ -121,10 +121,10 @@ $js_tambahan = <<<EOF
     [0, 'desc']
     ]
   } );
-  
 
 
-} );
+
+ } );
 
 
 
@@ -142,6 +142,10 @@ $(document).on('submit', '#form_anggota', function(e) {
     success: function(data) {
       if (data == 'OK') {
         location.reload(true);
+      }
+      else {
+        location.reload(true);
+        window.open("kartu_anggota.php?id_anggota="+data);
       }
     }
   });
@@ -201,9 +205,11 @@ function deleteAnggota( id_anggota )
       }
     }
   });
-}
+  }
 }
 </script>
-EOF;
+<?php
+$js_tambahan = ob_get_contents();
+ob_end_clean();
 include 'layout/footer.php';
 ?>
